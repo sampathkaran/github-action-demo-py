@@ -1,0 +1,14 @@
+name: Github Actions Demo
+run-name: ${{github.actor}} is testing github Actions
+on: [push]
+jobs:
+  Explore Github Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was triggered by a ${{ github.event_name }} event".
+      - run: echo "The job is running on a runnrer ${{ runner.os }}"
+      - run:  checkout the repository code
+        uses: actions/checkout@v4
+      - run: echo "The repo is  ${{ github.repository }}"
+
+      
